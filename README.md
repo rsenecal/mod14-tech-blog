@@ -82,6 +82,8 @@
 * [![NodeJS][Node.js]][Node-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+* [![Sequelize][Sequelize.org]][Sequelize-url]
+* [![Mysql][Mysql.com]][Mysql-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,7 +207,7 @@ Project Link: [https://github.com/rsenecal/mod14-tech-blog](https://github.com/r
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
-[Node.js]: https://img.shields.io/badge/NodeJS-NodeJS-green
+[Nodejs.org]: https://img.shields.io/badge/Node.js-4e4e4e?style=for-the-badge&logo=node.js&logoColor=#339933
 [Node-url]: https://https://nodejs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
@@ -221,3 +223,7 @@ Project Link: [https://github.com/rsenecal/mod14-tech-blog](https://github.com/r
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Sequelize-url]:https://sequelize.org/
+[Sequelize.org]:https://img.shields.io/badge/sequelize-4e4e4e?style=for-the-badge&logo=sequelize&logoColor=#52B0E7
+[Mysql.com]:https://img.shields.io/badge/MySQL-fff?style=for-the-badge&logo=MySQL&logoColor=#4479A1
+[Mysql-url]:https://www.mysql.com/
