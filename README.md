@@ -79,7 +79,7 @@
 
 ### Built With
 
-* [![NodeJS][Node.js]][Node-url]
+* [![NodeJS][Nodejs.org]][Node-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
 * [![Sequelize][Sequelize.org]][Sequelize-url]
