@@ -1,0 +1,32 @@
+{
+  "name": "mod14-tech-blog",
+  "version": "1.0.0",
+  "description": "Tech Blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsenecal/mod14-tech-blog.git"
+  },
+  "author": "Roodolph Senecal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsenecal/mod14-tech-blog/issues"
+  },
+  "homepage": "https://github.com/rsenecal/mod14-tech-blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "startbootstrap-clean-blog": "^6.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
