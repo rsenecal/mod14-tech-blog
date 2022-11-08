@@ -1,0 +1,17 @@
+[
+  {
+    "title": "What is force true in Sequelize?",
+    "content": "To your question: force: true adds a DROP TABLE IF EXISTS before trying to create the table - if you force, existing tables will be overwritten.11-Jan-2014",
+    "user_id": 1
+  },
+  {
+    "title": "How do I sync a database with Sequelize?",
+    "content": "A model can be synchronized with the database by calling model.sync(options) , an asynchronous function (that returns a Promise). With this call, Sequelize will automatically perform an SQL query to the database. Note that this changes only the table in the database, not the model in the JavaScript side",
+    "user_id": 2
+  },
+  {
+    "title": "How do you use Boolean in Sequelize?",
+    "content": "Sequelize has a BOOLEAN data type that you can use to define model attributes that accept Boolean values. The following example shows a User model that has an isActive attribute with BOOLEAN type: const User = sequelize. define",
+    "user_id": 3
+  }
+]
