@@ -92,7 +92,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get started with the Note Take App, you simply have to navigate to the URL [Note Taker](https://roody-mod14-tech-blog.herokuapp.com/)
+To get started with the Tech Blog, you simply have to navigate to the URL [Tech Blog](https://roody-mod14-tech-blog.herokuapp.com/)
 
 ### Prerequisites
 
