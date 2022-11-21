@@ -1,8 +1,7 @@
 const router = require("express").Router();
-// Include the Book model with the other imports
 const { User, Blog } = require("../../models");
 
-// GET all readers for the usre
+// GET all blogs
 router.get("/", async (req, res) => {
   try {
     const findAllBlogs = await Blog.findAll({
@@ -34,10 +33,10 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// CREATE a reader
+// CREATE a Blog
 router.post("/", async (req, res) => {
   try {
-    const blogData = await Reader.create(req.body);
+    const blogData = await Blog.create(req.body);
     res.status(200).json(blogData);
   } catch (err) {
     res.status(400).json(err);
@@ -47,7 +46,7 @@ router.post("/", async (req, res) => {
 // DELETE a reader
 router.delete("/:id", async (req, res) => {
   try {
-    const blogData = await Reader.destroy({
+    const blogData = await Blog.destroy({
       where: {
         id: req.params.id,
       },
