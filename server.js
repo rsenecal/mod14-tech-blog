@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require('path');
 const exphbs = require('express-handlebars');
+const { Post } = require('./models');
 
 // const routes = require("./routes");
 // const sequelize = require("./config/connection");
@@ -17,30 +18,43 @@ app.use(express.static('public'));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.render('index')
+// Routing of blog pages
+
+app.get('/', async (req, res) => {
+  const posts = await Post.find({})
+  res.render('index',{
+    posts
+  })
 });
 
-app.get('/about', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'pages/about.html'));
+app.get('/posts/new', (req, res) => {
+  res.render('newpost')
 });
 
-app.get('/contact', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'pages/contact.html'));
+app.post('/posts/store', (req, res) => {
+  Post.create(req.body,(err, post) => {
+    res.redirect('/')
+  })
 });
 
-app.get('/post', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'pages/post.html'));
-});
+// app.get('/about', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'pages/about.html'));
+// });
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+// app.get('/contact', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'pages/contact.html'));
+// });
+
+// app.get('/post', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'pages/post.html'));
+// });
+
 
 // turn on routes
 // app.use(routes);
 
-// turn on connection to db and server
-// sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 // });
