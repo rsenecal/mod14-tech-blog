@@ -1,20 +1,11 @@
-require("dotenv").config();
+const mongoose = require('mongoose');
 
-const Sequelize = require("sequelize");
+// Wrap Mongoose around local connection to MongoDB
+mongoose.connect('mongodb://127.0.0.1:27017/mygroceryDB', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-const sequelize = process.env.JAWSDB_URL
-  ? new Sequelize(process.env.JAWSDB_URL)
-  : new Sequelize(
-      process.env.DB_NAME,
-      process.env.DB_USER,
-      process.env.DB_PASSWORD,
-      {
-        host: "localhost",
-        dialect: "mysql",
-        dialectOptions: {
-          decimalNumbers: true,
-        },
-      }
-    );
+// Export connection
+module.exports = mongoose.connection;
 
-module.exports = sequelize;
