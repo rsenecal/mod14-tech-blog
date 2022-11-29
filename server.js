@@ -6,6 +6,8 @@ const { Post } = require('./models');
 // const routes = require("./routes");
 // const sequelize = require("./config/connection");
 
+const db = require("./config/connection");
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -24,15 +26,19 @@ app.use(express.urlencoded({ extended: true }));
 // Routing of blog pages
 
 app.get('/', async (req, res) => {
-  const posts = await Post.find({})
-  res.render('index',{
-    posts
+  console.log("Inside get /")
+  Post.find({})
+  .then (posts => {
+    console.log(posts)
+    res.render('newpost');
   })
 });
+
 
 app.get('/posts/new', (req, res) => {
   res.render('newpost')
 });
+
 
 app.post('/posts/store', (req, res) => {
   Post.create(req.body,(err, post) => {
@@ -55,6 +61,8 @@ app.post('/posts/store', (req, res) => {
 
 // turn on routes
 // app.use(routes);
-
+db.once('open',() => {
   app.listen(PORT, () => console.log("Now listening"));
+})
+  // app.listen(PORT, () => console.log("Now listening"));
 // });
